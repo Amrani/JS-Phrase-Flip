@@ -20,7 +20,7 @@ $(document).ready(function(){
   function type(){
     window.letterTimeout = setTimeout(type, 3000);
     setTimeout(flipup, 700);
-    setTimeout(flipdown, 800);
+    setTimeout(flipdown, 730);
     count++;
   }
   typeIt(phrases[0]);
