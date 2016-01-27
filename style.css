@@ -1,3 +1,19 @@
+body{
+  background: #2f3148;
+}
+body > section{
+  display: table; 
+  height: 100vh;
+  width: 100%;
+}
+.flip-container{
+  padding-left: 10%;
+  font-family: helvetica;
+  color: #ff6666;
+  display: table-cell;
+  vertical-align: middle;
+  width: 400px;
+}
 .flip-container.s-flip .flip-content {
   display: inline-block;
   -webkit-perspective: 500px;
