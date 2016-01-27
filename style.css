@@ -1,16 +1,61 @@
-body{
-	background: #2f3148;
+.flip-container.s-flip .flip-content {
+  display: inline-block;
+  -webkit-perspective: 500px;
+  perspective: 500px;
 }
-.box-text-wrapper{
-	display: table;	
-	height: 100vh;
-	width: 100%;
+
+.flip-container.s-flip > .flip-content > span{    
+  transform: rotateX(180deg);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
 }
-.box-text{
-	font-size: 28px;
-	text-align: center;
-	font-family: helvetica;
-	color: #ff6666;
-	display: table-cell;
-	vertical-align: middle;
+ 
+.flip-container.s-flip .flip-content > span.show-me {
+  animation: flip-up 1s;
+  transform: rotateX(0deg);
+  position: relative;
+  opacity: 1;
+}
+ 
+.flip-container.s-flip .flip-content > span.hide-me {
+  animation: flip-down 1s;
+  transform: rotateX(180deg);
+}
+
+
+@keyframes flip-up {
+  0% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+  30% {
+    transform: rotateX(50deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(360deg);
+    opacity: 1;
+  }
+}
+ 
+@keyframes flip-down {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  20% {
+    transform: rotateX(20deg);
+    opacity: .7;
+  }
+  80% {
+    transform: rotateX(120deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
 }
